@@ -1,7 +1,7 @@
-package org.jetbrains.plugins.template.services
+package com.github.andy2003.intellijswaggerannotationtoopenapiplugin.services
 
 import com.intellij.openapi.project.Project
-import org.jetbrains.plugins.template.MyBundle
+import com.github.andy2003.intellijswaggerannotationtoopenapiplugin.MyBundle
 
 class MyProjectService(project: Project) {
 
