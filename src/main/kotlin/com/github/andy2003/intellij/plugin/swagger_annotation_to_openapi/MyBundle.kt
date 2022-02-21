@@ -1,4 +1,4 @@
-package com.github.andy2003.intellijswaggerannotationtoopenapiplugin
+package com.github.andy2003.intellij.plugin.swagger_annotation_to_openapi
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

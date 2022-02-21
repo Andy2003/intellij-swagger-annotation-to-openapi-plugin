@@ -1,18 +1,17 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.andy2003.intellijswaggerannotationtoopenapiplugin</id>
-    <name>intellij-swagger-annotation-to-openapi-plugin</name>
-    <vendor>andy2003</vendor>
+	<id>com.github.andy2003.intellij.plugin.swagger_annotation_to_openapi</id>
+	<name>Swagger Java Annotation to OpenApi Annotation Migrator</name>
+	<vendor>andy2003</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+	<depends>com.intellij.modules.java</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.andy2003.intellijswaggerannotationtoopenapiplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.andy2003.intellijswaggerannotationtoopenapiplugin.services.MyProjectService"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.andy2003.intellijswaggerannotationtoopenapiplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+	<actions>
+		<action class="com.github.andy2003.intellij.plugin.swagger_annotation_to_openapi.action.SwaggerAnnotationToOpenApiConverterAction"
+				text="Migrate Swagger to OpenAPI"
+				description="Migrate Swagger Java annotations to OpenAPI java annotations"
+				id="migrate-swagger-to-open-api">
+			<add-to-group group-id="RefactoringMenu"/>
+		</action>
+	</actions>
 </idea-plugin>
